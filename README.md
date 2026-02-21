@@ -14,7 +14,7 @@ This tutorial will showcase some of the most important tools we can use in Tinke
 
 ![alt text](image-10.png)
 
-#### 2. Geometry is the shape of an shape.
+#### 2. Geometry is the shape of a shape.
 
 ![alt text](image-11.png)
 
@@ -40,7 +40,7 @@ This tutorial will showcase some of the most important tools we can use in Tinke
 
 ![alt text](image-18.png)
 
-#### 8. Throwaway shapes can help you align shapes when you don't already have an shape to align to.
+#### 8. Throwaway shapes can help you align shapes when you don't already have a shape to align to.
 
 ![alt text](image-19.png)
 
@@ -92,7 +92,7 @@ The best workflow for designing in TinkerCAD is:
 5. Slice and print!
 
 ## Sketch (I did this for you)
-When sketching your idea, have some measurements ready for anythin gthat needs to fit a specific way. With many sketches, you'll also want a top, front, and side sketch so that you are thinking about how you model will look in 3 dimensions. In the sketches provided to you, there are the following views:
+When sketching your idea, have some measurements ready for anything that needs to fit a specific way. With many sketches, you'll also want a top, front, and side sketch so that you are thinking about how you model will look in 3 dimensions. In the sketches provided to you, there are the following views:
 
 ### Sticky Note
 This view is just to keep in mind that a typical pad of Post-It Notes is `75mm` * `75mm`. We won't include the front or side view because we mostly just care about length and width.
