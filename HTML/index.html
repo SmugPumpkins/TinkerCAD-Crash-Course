@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>README</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 900px;
+            margin: 40px auto;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+            background-color: #3d3763;
+            color: rgb(238, 238, 238);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            height: 4px;
+            background: rgb(238, 238, 238);
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: rgb(252, 204, 141);
+            margin: 1.5rem 0.25rem;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background: rgb(252, 204, 141);
+            width: 100%;
+            margin-top: 0.1rem;
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 1.75rem;
+            color: rgb(250, 249, 202);
+            margin: 1.25rem 0.75rem;
+        }
+
+        h3::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: rgb(250, 249, 202);
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        h4 {
+            font-weight: 300;
+            font-size: 1.5rem;
+            color: rgb(201, 245, 248);
+            margin: 1rem 1.25rem;
+        }
+
+        h4::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: rgb(201, 245, 248);
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        h5 {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: rgb(239, 201, 248);
+            margin: 1rem 1.5rem;
+        }
+
+        h5::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: rgb(239, 201, 248);
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        h6 {
+            font-weight: 300;
+            font-size: 1rem;
+            color: rgb(248, 210, 201);
+            margin: 1rem 1.75rem;
+        }
+
+        h6::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: rgb(248, 210, 201);
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        a,
+        a:visited {
+            color: rgb(233, 157, 157);
+            text-decoration: underline;
+            font-weight: 400;
+        }
+
+        a:hover {
+            font-weight: 600;
+        }
+
+        body>p,
+        body>ul,
+        body>ol {
+            margin: 1rem 2rem;
+        }
+
+        p,
+        ul,
+        ol {
+            margin-bottom: 1rem;
+            text-align: justify;
+            text-align-last: left;
+        }
+
+        pre {
+            margin: 1em 0;
+            padding: 12px;
+            overflow-x: auto;
+        }
+
+        pre code {
+            padding: 0;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        code {
+            padding: 3px;
+            background: #100d24;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5em 0;
+        }
+
+        th,
+        td {
+            border: 1px solid white;
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        thead {
+            background-color: #2b1a4a;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #1d1235;
+        }
+
+        #end-message {
+            text-align: center;
+            text-align-last: center;
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 0;
+            color: rgb(250, 249, 202);
+        }
+
+        footer {
+            margin-top: 7rem;
+        }
+
+        #spacer {
+            height: 1rem;
+            background: transparent;
+        }
+
+        #copy {
+            text-align: center;
+            text-align-last: center;
+            color: #100120;
+            color: #403150;
+        }
+
+        .flourish::before {
+            content: "——";
+            margin: 0 0.5rem;
+        }
+
+        .flourish::after {
+            content: "——";
+            margin: 0 0.5rem;
+        }
+
+        #ducky {
+            line-height: 2.65rem;
+            font-family: "Google Sans Code", monospace;
+            font-weight: 600;
+            font-size: 2.5rem;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .yellow {
+            color: #f7ec52;
+        }
+
+        .orange {
+            color: #fcac00;
+        }
+
+        .eye {
+            color: #BCFAF2;
+        }
+
+        .water {
+            color: #008dd5;
+        }
+
+        .grass {
+            color: #96f58e;
+        }
+
+        #rubric {
+            margin-left: -0.5in;
+            margin-right: -0.5in;
+            width: calc(100% + 1.0in);
+            font-size: 0.6rem;
+        }
+
+        #rubric th {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TinkerCAD Crash Course</h1>
+    <p>A crash course in the Tinker CAD tools library.</p>
+    <h2>Purpose</h2>
+    <p>The purpose of this tutorial is to teach core TinkerCAD tools tools in effective and practical ways. The way we
+        create our Sticky Note To-Do Stencil today is not necessarily the most optimal way to do it (ie, the fewest
+        steps). Instead, the focus is to look at the use cases for different TinkerCAD tools, especially in regards to
+        creating 3D printable models.</p>
+    <h2>Goal</h2>
+    <p>The goal of today is to answer 2 important questions for creating models to 3D print with CAD software.</p>
+    <h3>How do I effectively use the TinkerCAD tools?</h3>
+    <p>This tutorial will showcase some of the most important tools we can use in TinkerCAD, but it won’t show all of
+        them. Instead, it focuses on the following principles for an effective and efficient TinkerCAD workflow:</p>
+    <h4>1. Shapes (the physical representation of geometry in TinkerCAD) are either a <code>solid</code> or a
+        <code>hole</code>.</h4>
+    <p><img alt="alt text" src="../image-10.png" /></p>
+    <h4>2. Geometry is the shape of a shape.</h4>
+    <p><img alt="alt text" src="../image-11.png" /></p>
+    <h4>3. Grouping <code>solids</code> and <code>holes</code> together is how specialized geometry is created.</h4>
+    <p><img alt="alt text" src="../image-12.png" /></p>
+    <h4>4. TinkerCAD does not allow you to adjust the faces, edges, or vertices of geometry directly (which is different
+        from most other 3D modeling or CAD software).</h4>
+    <p><img alt="alt text" src="../image-13.png" /></p>
+    <h4>5. TinkerCAD uses a grid that snaps shapes into place.</h4>
+    <p><img alt="alt text" src="../image-14.png" /></p>
+    <h4>6. TinkerCAD allows for specific dimensions and angles to be applied to shapes. Typing dimensions is always
+        better than eyeballing it.</h4>
+    <p><img alt="alt text" src="../image-16.png" /></p>
+    <p><img alt="alt text" src="../image-17.png" /></p>
+    <h4>7. Alignment tools are your best friend.</h4>
+    <p><img alt="alt text" src="../image-18.png" /></p>
+    <h4>8. Throwaway shapes can help you align shapes when you don’t already have a shape to align to.</h4>
+    <p><img alt="alt text" src="../image-19.png" /></p>
+    <h3>How do I ensure that 3D models are as printer friendly as possible?</h3>
+    <p>3D printers have come a long way, and we have some at STEM Collegiate that are cutting edge. But 3D printers
+        aren’t magic. The following principles will be considered throughout the design of our model:</p>
+    <h4>1. Printers print layer by layer, starting from the bottom of the model and moving upwards.</h4>
+    <p><img alt="alt text" src="../image-20.png" /></p>
+    <h4>2. Printer waste is harmful for the environment and increases costs of operation.</h4>
+    <p>CONTENT WARNING: Image of the innards of a bird that swallowed plastic waste.</p>
+    <details>
+        <summary>Click to View</summary>
+
+        <img alt="alt text" src="../image-21.png" />
+
+    </details>
+    <h4>3. Printers cannot print in midair. If part of a layer is not directly on top of the layer beneath it, the
+        printer adds support which increases printer waste.</h4>
+    <p><img alt="alt text" src="../image-23.png" /></p>
+    <p><img alt="alt text" src="../image-27.png" /></p>
+    <h4>4. Printers have a hard time with steep overhangs (anything over a 45° angle). Adding support increases printer
+        waste, and not adding support often results in failed prints which also increases waste.</h4>
+    <p><img alt="alt text" src="../image-24.png" /></p>
+    <p><img alt="alt text" src="../image-28.png" /></p>
+    <h4>5. Printers have a hard time keeping sharp edges adhered to the print bed (90° sharp angles sometimes stick
+        properly, but not always. Less than 90° will likely not stick at all). Adding a brim increases print waste, and
+        not adding a brim can result in a failed print which also increases waste.</h4>
+    <p><img alt="alt text" src="../image-25.png" /></p>
+    <p><img alt="alt text" src="../image-26.png" /></p>
+    <h4>6. Printers are not perfect in their dimensions, and have a very small margin of error. This can be avoided by
+        adding tolerances that are a fraction of a mm to your model. Printing pieces that are supposed to slot into one
+        another or fit together, but do not fit increase printer waste.</h4>
+    <p><img alt="alt text" src="../image-29.png" /></p>
+    <h2>Workflow</h2>
+    <p>The best workflow for designing in TinkerCAD is:</p>
+    <ol>
+        <li>Sketching the idea (my sketches are never to scale, but I do recommend including dimensions).</li>
+        <li>Consider 3D printer limitations and decide on an orientation for the model to print.</li>
+        <li>Design the model with that orientation in mind.</li>
+        <li>Export model.</li>
+        <li>Slice and print!</li>
+    </ol>
+    <h2>Sketch (I did this for you)</h2>
+    <p>When sketching your idea, have some measurements ready for anything that needs to fit a specific way. With many
+        sketches, you’ll also want a top, front, and side sketch so that you are thinking about how you model will look
+        in 3 dimensions. In the sketches provided to you, there are the following views:</p>
+    <h3>Sticky Note</h3>
+    <p>This view is just to keep in mind that a typical pad of Post-It Notes is <code>75mm</code> * <code>75mm</code>.
+        We won’t include the front or side view because we mostly just care about length and width.</p>
+    <p><img alt="alt text" src="../image.png" /></p>
+    <h3>Stencils</h3>
+    <p>Here we have a top view of the dimensions of our stencils. We won’t include the front or side view because we
+        mostly just care about length and width.</p>
+    <p>Our stencils have <code>76mm</code> * <code>76mm</code> squares so they will be just a little bit larger than our
+        sticky notes.</p>
+    <p>The stencil tabs have a length and width of <code>10mm</code> * <code>20mm</code>.</p>
+    <p><img alt="alt text" src="../image-1.png" /></p>
+    <h3>Holder Top View</h3>
+    <p>With the top view, we have an open front so that our tabs have room to hang out the front. This makes the length
+        of our hole <code>79mm</code>.</p>
+    <p>The width of the hole is <code>76.5mm</code> to account for fitting in the stencils which are <code>76mm</code>.
+        <code>0.5mm</code> makes a world of difference when considering margin of error!</p>
+    <p>The outer walls of the holder will have a dimension of <code>82mm</code> * <code>82mm</code>.</p>
+    <p><img alt="alt text" src="../image-2.png" /></p>
+    <h3>Holder Front View</h3>
+    <p>Our front view shows the slots that will hold our stencils. If we assume our stencils will have a height of
+        <code>1mm</code>, then <code>1.5mm</code> will have enough clearance for them to fit nicely.</p>
+    <p>We also have the width of the slots as <code>76.5mm</code> to allow for clearance.</p>
+    <p>The holder has a height of <code>30mm</code>.</p>
+    <p><img alt="alt text" src="../image-5.png" /></p>
+    <h3>Holder Side View</h3>
+    <p>Our side view just has our length and height dimensions.</p>
+    <p><img alt="alt text" src="../image-4.png" /></p>
+    <h2>Orientation (I also did this for you)</h2>
+    <p>When I think of how our 3d model should print, the biggest limiting factor is going to be those deep narrow slots
+        in the front of our stencil holder. If those are printed horizontally, it would be impossible to get any support
+        out, and without support it would sag resulting in a failed print. So printing with the bottom of the model on
+        the build plate is a bad idea.</p>
+    <p>If we orient the model with the front face touching the build plate, we reduce this risk significantly. However,
+        having our adhesion rely on those big slots could result in our print detaching from the bed and making the
+        print fail.</p>
+    <p>With this in mind, we will plan to print this model with the back touching the buildplate. This should allow us
+        to minimize our waste and risk of a failed print.</p>
+    <h2>Design (Now you have something to do)</h2>
+    <p>With a plan in mind, it’s time to design!</p>
+    <h3>Creating a New Document</h3>
+    <ol>
+        <li>Open up TinkerCAD and create a new 3D design.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-6.png" /></p>
+    <ol start="2">
+        <li>By default, TinkerCAD gives files a ridiculous name. Change the name of your document so its easy to find
+            later.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-7.png" /></p>
+    <ol start="3">
+        <li>By default, TinkerCAD opens in <code>perspective</code> view. This is how the world appears to us normally
+            with close things looking larger than far things, but it makes it nearly impossible to place shapes where we
+            want. Click the little cube in the bottom corner to change to <code>orthographic</code> view. This view
+            shows shapes in their measured dimensions no matter how far away they are.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-8.png" /></p>
+    <ol start="4">
+        <li>To navigate the view in TinkerCAD, clicking your <code>middle mouse button</code> allows you to pan.
+            Scrolling your <code>middle mouse button</code> allows you to zoom. Your <code>right mouse button</code>
+            allows you to rotate. Using these buttons to navigate will make your life much easier.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-9.png" /></p>
+    <h3>Creating Our Stencils</h3>
+    <ol>
+        <li>Find the <code>box</code> in the shapes menu.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-31.png" /></p>
+    <ol start="2">
+        <li>Drag the box to the center of the work plane.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-32.png" /></p>
+    <ol start="3">
+        <li>According to our sketch, the stencil dimensions are <code>76mm</code> * <code>76mm</code> *
+            <code>1mm</code>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-33.png" /></p>
+    <ol start="4">
+        <li>Right now, a big flat square will likely have its corners peel off of the buildplate. We can cut the corners
+            into rounded shapes! Open the search bar and search for a “MetaFillet”. This will be useful for creating
+            round corners.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-34.png" /></p>
+    <ol start="5">
+        <li>Drag the fillet out and set the radius to <code>5</code>. It’s okay for the height to be 8 because we will
+            be cutting it out shortly.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-35.png" /></p>
+    <ol start="6">
+        <li>Click and drag to select both of our shapes.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-36.png" /></p>
+    <ol start="7">
+        <li>Select the <code>align</code> tool. A shortcut for the <code>align</code> tool is <code>L</code>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-37.png" /></p>
+    <ol start="8">
+        <li>With the <code>align</code> tool selected, we have some nodes pop into view. A good practice is to click on
+            the shape you want other shapes to align to, which will sometimes move the nodes. Clicking on the nodes will
+            align shapes according to their vertical and horizontal positions. Shapes can either have their edges
+            aligned or their middles aligned. We want our fillet in the corner, so we will click on the nodes displayed
+            below.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-38.png" /></p>
+    <ol start="9">
+        <li>We need to cut all 4 of our corners, so we need more fillets! Click on the fillet to select it (you may need
+            to click somewhere on the grid to deselect first). Then duplicate it with the <code>duplicate</code> tool. A
+            shortcut for the <code>duplicate</code> tool is <code>Ctrl</code> + <code>D</code>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-39.png" /></p>
+    <ol start="10">
+        <li>Both fillets are overlapped right now, but the new duplicate is selected by default. By holding
+            <code>Shift</code> we can add the stencil to our selection, and align it to the next corner with the
+            <code>align</code> tool!</li>
+    </ol>
+    <p><img alt="alt text" src="../image-41.png" /></p>
+    <ol start="11">
+        <li>We can rotate our fillet by selecting it and clicking on the curved arrow. Dragging the curved arrow will
+            rotate the fillet. Holding the <code>Shift</code> key will force it to rotate in <code>45°</code>
+            increments.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-42.png" /></p>
+    <ol start="12">
+        <li>We will repeat that process 2 more times so that all of our corners have a fillet.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-43.png" /></p>
+    <ol start="13">
+        <li>Next, we turn the fillets into hole pieces. Select the 4 fillets and turn them into holes.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-44.png" /></p>
+    <ol start="14">
+        <li>To cut the holes out we can select everything and use the <code>Union Group</code> tool. The shortcut for
+            <code>Union Group</code> is <code>Ctrl</code> + <code>G</code>. Our hole shapes will be removed from our
+            main stencil shape.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-45.png" /></p>
+    <ol start="15">
+        <li>We are creating 3 stencils today, so we will duplicate our main stencil twice.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-46.png" /></p>
+    <ol start="16">
+        <li>Next we will add in our tabs. Our tabs are 10mm * 20mm * 1mm boxes. Because we will also want these rounded,
+            we will start by making one rounded tab, then duplicate it twice.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-47.png" /></p>
+    <ol start="17">
+        <li>To round it, we will cut the front 2 corners with hole fillets, but smooth the back corners out with solid
+            fillets. The fillets will have a radius of <code>5</code> and a height of <code>1</code>. Grid snapping and
+            <code>align</code> will help us ensure all of our shapes are connected properly.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-48.png" /></p>
+    <ol start="18">
+        <li>We will group these tab pieces together with <code>Union Group</code> and duplicate it 2 times.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-49.png" /></p>
+    <ol start="19">
+        <li>To simplify, <code>align</code> the 3 stencil bases so they overlap. We will align 1 of our tabs
+            <code>5mm</code>from the edge of a stencil template. Grid snapping will make this pretty easy.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-50.png" /></p>
+    <ol start="20">
+        <li>Our second tab will get snapped to the other side.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-51.png" /></p>
+    <ol start="21">
+        <li>A trick we can do to put our 3rd tab in the middle is group our first 2 tabs, and then align our 3rd tab to
+            it. Once it’s alligned, we can ungroup the other 2 tabs. (You will need to click the button,
+            <code>Ctrl</code> + <code>G</code> will not ungroup).</li>
+    </ol>
+    <p><img alt="alt text" src="../image-52.png" /></p>
+    <ol start="22">
+        <li>For each of our stencils, we will group 1 stencil with 1 tab. To make sure we don’t accidentally put 2 tabs
+            on one stencil, we will hide each stencil with <code>Ctrl</code> + <code>H</code> after we group each one.
+        </li>
+    </ol>
+    <p><img alt="alt text" src="../image-53.png" /></p>
+    <ol start="23">
+        <li><code>Ctrl</code> + <code>Shift</code> + <code>H</code> will show all of our hidden shapes again. </li>
+    </ol>
+    <p><img alt="alt text" src="../image-54.png" /></p>
+    <ol start="24">
+        <li>Time to add some stencil lines! We will start with square checkboxes, and we can do this by making a box
+            (hole) that is <code>6mm</code> * <code>6mm</code> * <code>6mm</code> with a corner radius of
+            <code>1mm</code>. The lines will be created wit a box that is <code>1.5mm</code> * <code>60mm</code> *
+            <code>6mm</code>, and will also have a corner radius of <code>1mm</code>. Both shapes will need to be moved
+            down <code>2mm</code> to ensure they cut through the stencil properly.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-55.png" /></p>
+    <ol start="25">
+        <li>Once you are happy with the placement of the 2 holes, select both and duplicate them. Hold
+            <code>Shift</code> and move them backward on the workplane until they are a distance away that feels right.
+            Then, without clicking anything else, duplicate again. Duplicate should create multiple copies that move
+            back the same amount each time!</li>
+    </ol>
+    <p><img alt="alt text" src="../image-56.png" /></p>
+    <ol start="26">
+        <li>We don’t want to redraw our lines for each stencil, so select all of our lines and duplicate them. With the
+            duplicate holes selected, group them with 1 of the stencils. Once they are grouped, hide the stencil that
+            has the holes cut out.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-57.png" /></p>
+    <ol start="27">
+        <li>Next we will replace the square holes with cylinder holes. We can align some <code>6mm</code> *
+            <code>6mm</code> * <code>20mm</code> cylinders where our boxes were, and then delete our boxes.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-58.png" /></p>
+    <ol start="28">
+        <li>Again, we will duplicate the holes to save ourselves some work, then group the duplicates with our stencil
+            and hide it.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-59.png" /></p>
+    <ol start="29">
+        <li>Last but not least, we will shorten our boxes for the stencil lines to <code>22mm</code> in width so we can
+            create 2 columns of check list items.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-60.png" /></p>
+    <ol start="30">
+        <li>Group the last stencils with the holes, unhide everything with <code>Ctrl</code> + <code>Shift</code> +
+            <code>H</code>, and now we have 3 stencils!</li>
+    </ol>
+    <p><img alt="alt text" src="../image-61.png" /></p>
+    <h3>Creating Our Holder</h3>
+    <ol>
+        <li>We will start with creating our outer box, which has the dimensions of <code>82mm</code> * <code>82mm</code>
+            * <code>30mm</code>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-62.png" /></p>
+    <ol start="2">
+        <li>Next, we will cut out our sticky note slot. Our sketch measurements are ~~<code>79mm</code> *
+            <code>76.5mm</code> * <code>20mm</code>~~, but we are actually going to start with <code>76.5mm</code> *
+            <code>76.5mm</code> * <code>20mm</code> so we can add some guides here in a minute. We will align this hole
+            with the top center of the main box.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-63.png" /></p>
+    <ol start="3">
+        <li>Our guides will be created with a roof piece, because the roof piece will allow us to keep our overhang
+            below 45°. Rotate the roof piece, then set the dimensions to <code>76.5mm</code> * <code>38.25mm</code> *
+            <code>20mm</code>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-65.png" /></p>
+    <ol start="4">
+        <li>First we will align it with our sticky note hole, then use the grid snapping so that the sticky note hole
+            becomes a house shape.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-66.png" /></p>
+    <ol start="5">
+        <li>Cut the holes out by grouping everything together!</li>
+    </ol>
+    <p><img alt="alt text" src="../image-67.png" /></p>
+    <ol start="6">
+        <li>For the slots to hold our stencils, we need a box hole that measures <code>76.5mm</code> *
+            <code>76.5mm</code> * <code>1.5mm</code>. Then duplicate it 3 times.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-68.png" /></p>
+    <ol start="7">
+        <li>We will align our 3 slot holes, and then stack them on top of eachother so they are <code>1.5mm</code> away
+            from eachother (one will move up <code>3mm</code> and the other will move up <code>6mm</code>). Then we will
+            group them.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-69.png" /></p>
+    <ol start="8">
+        <li>To vertically align everything, we will create a throwaway box that has a height of <code>10mm</code>. This
+            is the height between the base of our holder and the bottom of the sticky note hole. We want our slots to be
+            in the middle of those. Once the box is created, align the slots vertically with it. Then delete the
+            throwaway box.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-70.png" /></p>
+    <ol start="9">
+        <li>Finally, align the slots with the front of the main box, and cut them out!</li>
+    </ol>
+    <p><img alt="alt text" src="../image-71.png" /></p>
+    <h3>Extension - Decorating A Print</h3>
+    <p>Secretly, I had a 3rd goal in mind: How do I make <strong><em>cool</em></strong> 3D prints?</p>
+    <p>By creating flat <code>1mm</code> thick decorations, you can put shapes, text, or even images on the faces of a
+        3D print!</p>
+    <h4>Main Steps</h4>
+    <ol>
+        <li>Create a shape that is <code>1mm</code> thick. It can be any shape, and below there will be
+            <strong><em>fancy</em></strong> shapes you can use. The shape needs to be flat on 2 sides. This example will
+            use a cylinder, but you can use anything.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-73.png" /></p>
+    <ol start="2">
+        <li>Rotate the shape so it has the same orientation as the face you are putting it on. These shapes
+            <strong>cannot</strong> be placed on the face that will be put on the build plate.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-74.png" /></p>
+    <ol start="3">
+        <li>Align the shape how you would like, then pull it out <code>0.5mm</code>. With grid snapping on, you either
+            need to change the snap grid value or type in the amount you want to move it by.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-75.png" /></p>
+    <ol start="4">
+        <li>With a <code>1mm</code> thick shape overlapping by <code>0.5mm</code>, you can now either emboss (raise) or
+            engrave (cut out) the decoration. These measurements create a <code>0.5mm</code> overhang, which is shallow
+            enough that it doesn’t cause print issues, but deep enough that it can be clearly seen.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-76.png" /></p>
+    <ol start="5">
+        <li>To emboss, leave the decoration as a solid. To engrave, turn the decoration into a hole. Then, group it with
+            the face and <em>voila!</em> your print is now cool!</li>
+    </ol>
+    <p><img alt="alt text" src="../image-77.png" /></p>
+    <h4>Basic Text</h4>
+    <ol>
+        <li>The basic text tool can be searched for.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-72.png" /></p>
+    <ol start="2">
+        <li>Once text is created, you can change what it says with the <code>text</code> parameter, and change the way
+            it looks with the <code>font</code> parameter.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-79.png" /></p>
+    <ol start="3">
+        <li>Scale your text to fit the face it goes on. Once the width and length are correct, set the height to
+            <code>1mm</code>. Then follow the Main Steps above.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-80.png" /></p>
+    <h4>Custom Fonts</h4>
+    <p>TinkerCAD has a very limited font selection. If you want a custom font, you can import an SVG of the text that
+        you want. If you aren’t familiar with making SVGs, then a quick and easy process is outlined below:</p>
+    <ol>
+        <li>Visit <a href="https://text-to-svg.com/">https://text-to-svg.com/</a>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-81.png" /></p>
+    <ol start="2">
+        <li>Type in your desired text and choose your desired font. Embossing and engraving works best with a solid font
+            as opposed to one with lots of little pieces coming off.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-83.png" /></p>
+    <ol start="3">
+        <li>Download the SVG (make sure to save it somewhere you can find it!).</li>
+    </ol>
+    <p><img alt="alt text" src="../image-84.png" /></p>
+    <ol start="4">
+        <li>Back in TinkerCAD, click <code>Import</code>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-85.png" /></p>
+    <ol start="5">
+        <li>Click <code>Choose a file</code> and find the SVG you just created.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-86.png" /></p>
+    <ol start="6">
+        <li>The dimension sizes length and width are linked, so figure out which one is too big or too small for the
+            face you want to put it on and change the value as needed. Then click <code>Import</code>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-87.png" /></p>
+    <ol start="7">
+        <li>Set the thickness to <code>1mm</code> and follow the Main Steps above.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-88.png" /></p>
+    <h4>Charms</h4>
+    <p>TinkerCAD has some premade decorative shapes called “charms”.</p>
+    <ol>
+        <li>Search “charm” and find one that looks cool.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-89.png" /></p>
+    <ol start="2">
+        <li>Add it to the workplane, set the thickness to <code>1mm</code>, and follow the Main Steps above.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-90.png" /></p>
+    <h4>Custom SVGs</h4>
+    <p>Any 2 color image can be turned into an SVG for you to decorate faces with. This can be images you find online or
+        even ones you sketch yourself. If you aren’t familiar with making SVGs, then a quick and easy process is
+        outlined below:</p>
+    <ol>
+        <li>Have an image that can easily be converted to 2 colors. I sketched this rocket just for today!</li>
+    </ol>
+    <p><img alt="alt text" src="../image-91.png" /></p>
+    <ol start="2">
+        <li>Visit <a href="https://picsvg.com/">https://picsvg.com/</a>. Don’t accidentally misclick on this website
+            because it has a lot of fake ads.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-92.png" /></p>
+    <ol start="3">
+        <li>Click <code>UPLOAD A PICTURE</code> and find your picture.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-93.png" /></p>
+    <ol start="4">
+        <li>Scroll down and click <code>DOWNLOAD SVG</code>. Make sure you save it somewhere you can find!</li>
+    </ol>
+    <p><img alt="alt text" src="../image-94.png" /></p>
+    <ol start="5">
+        <li>Back in TinkerCAD, click <code>Import</code>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-85.png" /></p>
+    <ol start="6">
+        <li>Click <code>Choose a file</code> and find the SVG you just created.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-86.png" /></p>
+    <ol start="7">
+        <li>The dimension sizes length and width are linked, so figure out which one is too big or too small for the
+            face you want to put it on and change the value as needed. Then click <code>Import</code>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-95.png" /></p>
+    <ol start="8">
+        <li>Set the thickness to <code>1mm</code> and follow the Main Steps above.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-96.png" /></p>
+    <h2>Export (This is the last thing we are doing together)</h2>
+    <ol>
+        <li>With the model selected, click <code>Export</code>.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-99.png" /></p>
+    <ol start="2">
+        <li>Make sure that you have <code>The selected shape.</code> selected. Then chose <code>.STL</code> for the file
+            type. By default the file name will be set to your main file’s name, so rename it accordingly so you don’t
+            just overwrite the same file over and over again. Repeat these steps for each model in your file.</li>
+    </ol>
+    <p><img alt="alt text" src="../image-100.png" /></p>
+    <h2>Slice and Print (This is your homework)</h2>
+    <p>With your STL saved, you are ready to print!</p>
+    <p>I’d love to make more of a tutorial with screen shots, but slicingg and printing is a whole new kettle of fish.
+        This tutorial should be able to get you started, but there are also some experts around the school who would
+        love to help!</p>
+    <p>Good luck, and have fun printing!</p>
+    <p><a href="https://www.youtube.com/watch?v=xUi54VpSeek">Tutorial Video</a></p>
+    <footer>
+        <pre id="ducky">
+    <span class="yellow">_</span>
+ <span class="yellow">__(</span><span class="eye">o</span><span class="yellow">)</span><span class="orange">=</span>
+ <span class="yellow">\___)</span>
+<span class="grass">&gt;</span><span class="water">~~~~~</span><span class="grass">&lt;</span></pre>
+        <p id="end-message" class="flourish"><em>Make something worth making.</em></p>
+        <div id="spacer"></div>
+        <p id="copy">© Nathan Forsyth</p>
+    </footer>
+</body>
+
+</html>
